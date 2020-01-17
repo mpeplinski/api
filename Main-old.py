@@ -17,6 +17,7 @@ r = requests.get('https://stat.gov.pl/download/gfx/portalinformacyjny/pl/default
 
 with open('dane.xlsx', 'wb') as f:
     f.write(r.content)
+#wdw
 
 #impot danych kolumn z excel
 #surowedane = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=12, skip_footer=5, usecols='A:G')
