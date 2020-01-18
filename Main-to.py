@@ -75,3 +75,14 @@ plt.ylabel('Liczba oosób w Tysiącach')
 plt.show()
 
 #data = ogolem_filtr1.groupby('razem total').mean()
+
+
+df = ogolem_filtr1
+#test
+#print(df)
+
+# usuwanie niepotrzebnych kolumn 
+df = df.drop(['mężczyźni men'], axis=1)  # jeżeli potrzeba usunąć inne, należy je wpisać w nawias kwadratowy -- UWAGA -- jest to robione tylko na potrzeby wykresu ukazującego wpływ na cenę!
+df.dropna(inplace=True)                         # usuń wszystkie wiersze z chociaż jedną wartością NaN
+#test
+#print(df)
