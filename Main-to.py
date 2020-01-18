@@ -23,3 +23,15 @@ r = requests.get('https://stat.gov.pl/download/gfx/portalinformacyjny/pl/default
 
 with open('dane.xlsx', 'wb') as f:
     f.write(r.content)
+#impot danych kolumn z excel
+#surowedane = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=12, skip_footer=5, usecols='A:G')
+ogolem = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=10, nrows=11, usecols='A:G')
+miasto = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=23, nrows=8, usecols='A:G')
+wies = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=33, nrows=8, usecols='A:G')
+#ogolem1 = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=10, nrows=11, usecols='A:G')
+
+#print('Ogólem \n: ',wies)
+#print('Miasto: \n',miasto)
+#print('Wies: \n',wies)
+
+print(tabulate(ogolem, headers='keys', tablefmt='psql'))
