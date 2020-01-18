@@ -35,3 +35,10 @@ wies = pd.read_excel('dane.xlsx', sheet_name='Tabl.2.1', skiprows=33, nrows=8, u
 #print('Wies: \n',wies)
 
 print(tabulate(ogolem, headers='keys', tablefmt='psql'))
+
+
+#convert to csv
+ogolem.to_csv(r'./ogolem.csv', sep=',', index = False, header=True)
+wies.to_csv(r'./wies.csv', sep=',', index = False, header=True)
+miasto.to_csv(r'./miasto.csv', sep=',', index = False, header=True)
+
