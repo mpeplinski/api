@@ -42,3 +42,17 @@ ogolem.to_csv(r'./ogolem.csv', sep=',', index = False, header=True)
 wies.to_csv(r'./wies.csv', sep=',', index = False, header=True)
 miasto.to_csv(r'./miasto.csv', sep=',', index = False, header=True)
 
+
+# import csv
+ogolem_csv = pd.read_csv('ogolem.csv',index_col=0)
+
+
+
+#ogolem_dict = ogolem.to_dict('list')
+#print(ogolem_dict)
+###############################Filtrowanie za pomocą loc i iloc
+ogolem_filtr = ogolem_csv.loc['Styczeń':'Wrzesień', :]
+ogolem_filtr1 = ogolem_filtr.iloc[:, 1:3]
+ogolem_filtr2 = ogolem_filtr.iloc[:, 4:6]
+print(tabulate(ogolem_filtr, headers='keys', tablefmt='psql'))
+
