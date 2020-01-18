@@ -66,3 +66,12 @@ plt.title('Osoby wykonujące pracę nierejestrowaną ogółem w roku 2017')
 plt.xlabel('Miesiące')
 plt.ylabel('Liczba oosób w Tysiącach')
 plt.show()
+
+
+ogolem_filtr2.plot(kind='bar')
+plt.title('Osoby wykonujące pracę nierejestrowaną jednorazowo w miesiącu')
+plt.xlabel('Miesiące')
+plt.ylabel('Liczba oosób w Tysiącach')
+plt.show()
+
+#data = ogolem_filtr1.groupby('razem total').mean()
