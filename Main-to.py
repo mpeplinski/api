@@ -56,3 +56,13 @@ ogolem_filtr1 = ogolem_filtr.iloc[:, 1:3]
 ogolem_filtr2 = ogolem_filtr.iloc[:, 4:6]
 print(tabulate(ogolem_filtr, headers='keys', tablefmt='psql'))
 
+
+#data = ogolem_filtr1.groupby('Unnamed: 0').mean()
+#male_litery = [w.lower() for w in ogolem_filtr]
+print(tabulate(ogolem_filtr, headers='keys', tablefmt='psql'))
+#print (male_litery)
+ogolem_filtr1.plot(kind='bar')
+plt.title('Osoby wykonujące pracę nierejestrowaną ogółem w roku 2017')
+plt.xlabel('Miesiące')
+plt.ylabel('Liczba oosób w Tysiącach')
+plt.show()
